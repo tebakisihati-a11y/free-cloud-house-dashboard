@@ -1,0 +1,18 @@
+{
+  "house": "Morvexa Free Cloud House",
+  "updated": "2026-10-17T22:59:20+0700",
+  "diskFreeGB": "5",
+  "snapshot": {
+    "last": "",
+    "bytes": ""
+  },
+  "clouds": [
+    {"slot": 1, "name": "GitHub Repo",          "status": "ready(remote)"},
+    {"slot": 2, "name": "GitHub Actions",       "status": "workflows-siap"},
+    {"slot": 3, "name": "GitHub Pages",         "status": "via-Cloudflare-Pages"},
+    {"slot": 4, "name": "MEGA 20GB",            "status": "siap"},
+    {"slot": 5, "name": "Google Drive 15GB",    "status": "siap"},
+    {"slot": 6, "name": "MongoDB Katalog",      "status": "via-github"},
+    {"slot": 7, "name": "Cloudflare Workers",   "status": "opsional"}
+  ]
+}
