@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MFC — Morvexa Free Cloud House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="logo">🏠</span>
+      <div>
+        <h1 id="house-name">Morvexa Free Cloud House</h1>
+        <p class="sub">Satu rumah • 7 cloud gratis • backup otomatis terenkripsi</p>
+      </div>
+    </div>
+    <div class="meta">
+      <span id="disk-free" class="pill pill-ok">disk …</span>
+      <span id="last-snap" class="pill">snapshot …</span>
+      <span id="updated" class="muted">…</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="grid" class="grid" aria-label="7 slot cloud">
+      <!-- kartu slot dirender oleh app.js -->
+    </section>
+
+    <section class="panel">
+      <h2>Snapshot terakhir</h2>
+      <div id="snapshot-detail" class="table-wrap">
+        <p class="muted">Memuat…</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Cara kerja backup</h2>
+      <ol class="flow">
+        <li><b>Laptop/Morvexa-CLOUD</b> → <code>bin/mfc backup</code> (tar+gzip+AES-256-CBC pbkdf2)</li>
+        <li>→ <b>MEGA</b> 20 GB (arsip snapshot • gratis tanpa kartu)</li>
+        <li>→ <b>Google Drive</b> 15 GB (mirror manifest & essentials)</li>
+        <li>→ <b>katalog via GitHub repo</b> (+ MongoDB opsional) &amp; alarm via <b>Cloudflare Workers</b> opsional</li>
+        <li>→ <b>GitHub</b> repo (manifest &amp; status) → <b>Actions</b> jadwal → <b>Pages</b> dashboard</li>
+      </ol>
+      <p class="muted">Mesin: tar + gzip + openssl (semua bawaan macOS — tanpa dependency external).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>MFC House • hasil olahan <code>state/dashboard.json</code> • GitHub Pages</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
