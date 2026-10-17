@@ -1,10 +1,12 @@
 {
   "house": "Morvexa Free Cloud House",
-  "updated": "2026-10-18T00:43:01+0700",
+  "updated": "2026-10-18T01:29:43+0700",
   "diskFreeGB": "4",
   "snapshot": {
     "last": "20261017-214142",
-    "bytes": "20G"
+    "bytes": "20G",
+    "sha256": "3ff2f852a9d3dba0ce0ff59e984d4c759ffb4baeca7fb9662c68fa851f835515",
+    "created": "2026-10-17T23:43:23+0700"
   },
   "clouds": [
     {"slot": 1, "name": "GitHub Repo", "status": "ready(remote)"},
