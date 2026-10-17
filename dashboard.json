@@ -1,6 +1,6 @@
 {
   "house": "Morvexa Free Cloud House",
-  "updated": "2026-10-17T23:50:45+0700",
+  "updated": "2026-10-17T23:51:44+0700",
   "diskFreeGB": "5",
   "snapshot": {
     "last": "20261017-214142",
@@ -13,6 +13,6 @@
     {"slot": 4, "name": "MEGA 20GB",            "status": "siap"},
     {"slot": 5, "name": "Google Drive 5TiB",    "status": "siap"},
     {"slot": 6, "name": "Katalog D1 (Cloudflare)", "status": "D1(mfch)-siap"},
-    {"slot": 7, "name": "Cloudflare Workers",   "status": "opsional"}
+    {"slot": 7, "name": "Alarm Workers (CF)",  "status": "mfc-health-LIVE"}
   ]
 }
