@@ -1,54 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MFC — Morvexa Free Cloud House</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Morvexa Free Cloud House: backup laptop terenkripsi ke delapan slot cloud gratis, tanpa kartu kredit.">
+  <meta name="color-scheme" content="light">
+  <title>MFC · Morvexa Free Cloud House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="brand">
-      <span class="logo">🏠</span>
-      <div>
-        <h1 id="house-name">Morvexa Free Cloud House</h1>
-        <p class="sub">Satu rumah • 7 cloud gratis • backup otomatis terenkripsi</p>
-      </div>
-    </div>
-    <div class="meta">
-      <span id="disk-free" class="pill pill-ok">disk …</span>
-      <span id="last-snap" class="pill">snapshot …</span>
-      <span id="updated" class="muted">…</span>
-    </div>
+<body id="top">
+  <header class="site-head">
+    <a class="wordmark" href="#top">
+      <svg class="mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+        <rect x="1"  y="1"  width="14" height="14" fill="#ff00bc"/>
+        <rect x="17" y="1"  width="14" height="14" fill="none" stroke="#ff00bc" stroke-width="2"/>
+        <rect x="1"  y="17" width="30" height="14" fill="none" stroke="#ff00bc" stroke-width="2"/>
+      </svg>
+      <span class="name"><b>Morvexa</b>&nbsp;Free Cloud House</span>
+    </a>
+    <nav class="site-nav" aria-label="Utama">
+      <a href="#slot">Slot</a>
+      <a href="https://github.com/tebakisihati-a11y/free-cloud-house-dashboard">Kode</a>
+    </nav>
+    <button id="freshness" class="fresness" type="button" title="Segarkan status">memuat…</button>
   </header>
 
   <main>
-    <section id="grid" class="grid" aria-label="slot cloud">
-      <!-- kartu slot dirender oleh app.js -->
+    <section class="hero">
+      <figure class="hero-art">
+        <div class="hashfield">
+          <p class="hash-caption">mfch-20261017-214142.tar.gz.enc · AES-256</p>
+          <code id="sha-art" class="hash-art">memuat…</code>
+          <button id="copy-sha" class="ghost-btn" type="button">Salin SHA-256</button>
+        </div>
+        <figcaption class="meta" id="snap-created">manifest belum ada</figcaption>
+      </figure>
+      <h1 class="display">Backup tanpa kartu kredit.</h1>
+      <p class="lede">Snapshot &asymp;20&nbsp;GB dari laptop ini terenkripsi AES-256, lalu disalin otomatis ke delapan slot cloud gratis: MEGA, Google Drive 5&nbsp;TiB, TeraBox 1&nbsp;TB, GitHub dan Cloudflare.</p>
     </section>
 
-    <section class="panel">
-      <h2>Snapshot terakhir</h2>
-      <div id="snapshot-detail" class="table-wrap">
-        <p class="muted">Memuat…</p>
-      </div>
+    <section class="slots" id="slot">
+      <h2 class="section-title">Delapan slot aktif.</h2>
+      <div class="grid" id="grid"></div>
+      <noscript><p class="lede">Aktifkan JavaScript untuk menampilkan status slot. Data mentah tersedia di <b>dashboard.json</b>.</p></noscript>
     </section>
 
-    <section class="panel">
-      <h2>Cara kerja backup</h2>
-      <ol class="flow">
-        <li><b>Laptop/Morvexa-CLOUD</b> → <code>bin/mfc backup</code> (tar+gzip+AES-256-CBC pbkdf2)</li>
-        <li>→ <b>MEGA</b> 20 GB (arsip snapshot • gratis tanpa kartu)</li>
-        <li>→ <b>Google Drive</b> 15 GB (mirror manifest & essentials)</li>
-        <li>→ <b>katalog via GitHub repo</b> (+ MongoDB opsional) &amp; alarm via <b>Cloudflare Workers</b> opsional</li>
-        <li>→ <b>GitHub</b> repo (manifest &amp; status) → <b>Actions</b> jadwal → <b>Pages</b> dashboard</li>
-      </ol>
-      <p class="muted">Mesin: tar + gzip + openssl (semua bawaan macOS — tanpa dependency external).</p>
+    <section class="stats" id="arsip" aria-label="Ringkasan arsip">
+      <h2 class="section-title">Arsip snapshot.</h2>
+      <dl class="stat-row">
+        <div class="stat"><dd id="stat-size">…</dd><dt>arsip terenkripsi</dt></div>
+        <div class="stat"><dd id="stat-slots">…</dd><dt>slot cloud aktif</dt></div>
+        <div class="stat"><dd>AES-256</dd><dt>PBKDF2 200.000 iterasi</dt></div>
+      </dl>
     </section>
   </main>
 
-  <footer>
-    <p>MFC House • hasil olahan <code>state/dashboard.json</code> • GitHub Pages</p>
+  <footer class="site-foot">
+    <div class="rule"></div>
+    <div class="foot-row">
+      <p class="smallprint">Backup laptop. Gratis selamanya. Tanpa kartu kredit.</p>
+      <a class="arch-link" href="#slot">Semua slot ›</a>
+    </div>
   </footer>
 
   <script src="app.js"></script>
